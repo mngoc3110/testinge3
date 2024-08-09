@@ -1,0 +1,127 @@
+# BEGIN HMWP_RULES
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^([_0-9a-zA-Z-]+/)?linh-admin-ajax.php$ /wp-admin/admin-ajax.php [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?linh-admin/(.*) /wp-admin/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?linh-login$ /wp-login.php [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?linh-login/(.*) /wp-login.php$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?lostpass$ /wp-login.php?action=lostpassword [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?register$ /wp-login.php?action=register [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?modules/1a03f1c702/(.*) /wp-content/plugins/akismet/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?modules/e39123425b/(.*) /wp-content/plugins/all-in-one-wp-migration/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?modules/a7492b4e00/(.*) /wp-content/plugins/collectchat/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?modules/8516d2654f/(.*) /wp-content/plugins/contact-form-7/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?modules/bad0ab09f2/(.*) /wp-content/plugins/display-posts-shortcode/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?modules/7d79dfc296/(.*) /wp-content/plugins/florence-core/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?modules/2a5e26e2a3/(.*) /wp-content/plugins/fluentform/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?modules/adc95ac838/(.*) /wp-content/plugins/google-analytics-dashboard-for-wp/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?modules/e23d266be8/(.*) /wp-content/plugins/duracelltomi-google-tag-manager/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?modules/d0f4711431/(.*) /wp-content/plugins/hide-my-wp/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?modules/f93ae5db1f/(.*) /wp-content/plugins/Hostinger/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?modules/32a82a95e5/(.*) /wp-content/plugins/insert-headers-and-footers/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?modules/697351d7e6/(.*) /wp-content/plugins/jetpack/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?modules/b53cd24303/(.*) /wp-content/plugins/katex/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?modules/966a9fe7d2/(.*) /wp-content/plugins/litespeed-cache/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?modules/313e568472/(.*) /wp-content/plugins/instagram-feed/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?modules/1ba4de1cfe/(.*) /wp-content/plugins/use-any-font/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?modules/0bf1c7f2c9/(.*) /wp-content/plugins/vafpress-post-formats-ui-develop/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?modules/f9c7f63a6a/(.*) /wp-content/plugins/wordpress-seo/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?modules/(.*) /wp-content/plugins/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?views/(.*) /wp-content/themes/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?files/(.*) /wp-content/uploads/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?resources/(.*) /wp-content/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?lib/(.*) /wp-includes/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?comments/(.*) /wp-comments-post.php$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?linh-writer/(.*) /author/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?json/(.*) /wp-json/$2 [QSA,L]
+</IfModule>
+
+
+# END HMWP_RULES
+# BEGIN HMWP_VULNERABILITY
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteCond %{THE_REQUEST} etc/passwd [NC,OR]
+RewriteCond %{THE_REQUEST} cgi-bin [NC,OR]
+RewriteCond %{QUERY_STRING} (\<|%3C).*object.*(\>|%3E) [NC,OR]
+RewriteCond %{QUERY_STRING} (<|%3C)([^o]*o)+bject.*(>|%3E) [NC,OR]
+RewriteCond %{QUERY_STRING} (\<|%3C).*iframe.*(\>|%3E) [NC,OR]
+RewriteCond %{QUERY_STRING} (<|%3C)([^i]*i)+frame.*(>|%3E) [NC,OR]
+RewriteCond %{QUERY_STRING} base64_encode.*\(.*\) [NC,OR]
+RewriteCond %{QUERY_STRING} base64_(en|de)code[^(]*\([^)]*\) [NC,OR]
+RewriteCond %{QUERY_STRING} (localhost|loopback|127\.0\.0\.1) [NC,OR]
+RewriteCond %{QUERY_STRING} concat[^\(]*\( [NC,OR]
+RewriteCond %{QUERY_STRING} union([^s]*s)+elect [NC,OR]
+RewriteCond %{QUERY_STRING} union([^a]*a)+ll([^s]*s)+elect [NC,OR]
+RewriteCond %{QUERY_STRING} (sp_executesql) [NC]
+RewriteRule ^(.*)$ - [F]
+</IfModule>
+
+<IfModule mod_headers.c>
+Header always unset x-powered-by
+Header always unset server
+ServerSignature Off
+</IfModule>
+
+<IfModule mod_headers.c>
+Header set Strict-Transport-Security "max-age=63072000"
+Header set Content-Security-Policy "object-src 'none'"
+Header set X-XSS-Protection "1; mode=block"
+Header set X-Content-Type-Options "nosniff"
+</IfModule>
+
+
+
+# END HMWP_VULNERABILITY
+# BEGIN LSCACHE
+# END LSCACHE
+# BEGIN NON_LSCACHE
+# END NON_LSCACHE
+# BEGIN WordPress
+# Các nội dung nằm giữa "BEGIN WordPress" và "END WordPress" được tạo ra tự động, và chỉ nên được thay đổi thông qua các filter của WordPress. Mọi thay đổi tới thành phần này có thể sẽ bị mất và ghi đè.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?linh-admin-ajax.php$ /wp-admin/admin-ajax.php [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?linh-admin/(.*) /wp-admin/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?linh-login$ /wp-login.php [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?linh-login/(.*) /wp-login.php$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?lostpass$ /wp-login.php?action=lostpassword [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?register$ /wp-login.php?action=register [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?modules/1a03f1c702/(.*) /wp-content/plugins/akismet/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?modules/e39123425b/(.*) /wp-content/plugins/all-in-one-wp-migration/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?modules/a7492b4e00/(.*) /wp-content/plugins/collectchat/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?modules/8516d2654f/(.*) /wp-content/plugins/contact-form-7/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?modules/bad0ab09f2/(.*) /wp-content/plugins/display-posts-shortcode/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?modules/7d79dfc296/(.*) /wp-content/plugins/florence-core/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?modules/2a5e26e2a3/(.*) /wp-content/plugins/fluentform/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?modules/adc95ac838/(.*) /wp-content/plugins/google-analytics-dashboard-for-wp/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?modules/e23d266be8/(.*) /wp-content/plugins/duracelltomi-google-tag-manager/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?modules/d0f4711431/(.*) /wp-content/plugins/hide-my-wp/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?modules/f93ae5db1f/(.*) /wp-content/plugins/Hostinger/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?modules/32a82a95e5/(.*) /wp-content/plugins/insert-headers-and-footers/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?modules/697351d7e6/(.*) /wp-content/plugins/jetpack/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?modules/b53cd24303/(.*) /wp-content/plugins/katex/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?modules/966a9fe7d2/(.*) /wp-content/plugins/litespeed-cache/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?modules/313e568472/(.*) /wp-content/plugins/instagram-feed/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?modules/1ba4de1cfe/(.*) /wp-content/plugins/use-any-font/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?modules/0bf1c7f2c9/(.*) /wp-content/plugins/vafpress-post-formats-ui-develop/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?modules/f9c7f63a6a/(.*) /wp-content/plugins/wordpress-seo/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?modules/(.*) /wp-content/plugins/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?views/(.*) /wp-content/themes/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?files/(.*) /wp-content/uploads/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?resources/(.*) /wp-content/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?lib/(.*) /wp-includes/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?comments/(.*) /wp-comments-post.php$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?linh-writer/(.*) /author/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?json/(.*) /wp-json/$2 [QSA,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress

@@ -1,0 +1,970 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Florence\n"
+"POT-Creation-Date: 2019-05-13 14:49-0800\n"
+"PO-Revision-Date: 2019-05-13 14:49-0800\n"
+"Last-Translator: \n"
+"Language-Team: Solo Pine\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.4\n"
+"X-Poedit-KeywordsList: _e;__;esc_html__;esc_html_e\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:11
+msgid "404"
+msgstr ""
+
+#: ../404.php:12
+msgid "The page you are looking for has not been found."
+msgstr ""
+
+#: ../archive.php:13
+msgid "<span>Daily Archives:</span>"
+msgstr ""
+
+#: ../archive.php:14 ../archive.php:19 ../archive.php:24
+#, php-format
+msgid "<h1>%s</h1>"
+msgstr ""
+
+#: ../archive.php:18
+msgid "<span>Monthly Archives:</span>"
+msgstr ""
+
+#: ../archive.php:23
+msgid "<span>Yearly Archives:</span>"
+msgstr ""
+
+#: ../archive.php:27
+msgid "<h1>Archives:</h1>"
+msgstr ""
+
+#: ../author.php:11
+msgid "All Posts By"
+msgstr ""
+
+#: ../category.php:11
+msgid "Browsing Category"
+msgstr ""
+
+#: ../category.php:12 ../search.php:12 ../tag.php:12
+#, php-format
+msgid "%s"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:327
+msgid "Install Required Plugins"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:328
+msgid "Install Plugins"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:330
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:332
+#, php-format
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:333
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:385
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:386
+#: ../class-tgm-plugin-activation.php:827
+#: ../class-tgm-plugin-activation.php:2533
+#: ../class-tgm-plugin-activation.php:3580
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:387
+#: ../class-tgm-plugin-activation.php:3159
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:388
+msgid "The following plugin was activated successfully:"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:390
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:392
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:394
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:395
+msgid "Dismiss this notice"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:396
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:397
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:523
+msgid "Update Required"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:934
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:934
+#: ../class-tgm-plugin-activation.php:937
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:937
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:1982
+#, php-format
+msgid "TGMPA v%s"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:2273
+msgid "Required"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:2276
+msgid "Recommended"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:2292
+msgid "WordPress Repository"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:2295
+msgid "External Source"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:2298
+msgid "Pre-Packaged"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:2315
+msgid "Not Installed"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:2319
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:2321
+msgid "Active"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:2327
+msgid "Required Update not Available"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:2330
+msgid "Requires Update"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:2333
+msgid "Update recommended"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:2490
+msgid "Installed version:"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:2498
+msgid "Minimum required version:"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:2510
+msgid "Available version:"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:2533
+msgid "No plugins to install, update or activate."
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:2547
+msgid "Plugin"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:2548
+msgid "Source"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:2549
+msgid "Type"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:2553
+msgid "Version"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:2554
+msgid "Status"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:2603
+#, php-format
+msgid "Install %2$s"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:2608
+#, php-format
+msgid "Update %2$s"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:2614
+#, php-format
+msgid "Activate %2$s"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:2684
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:2717
+msgid "Install"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:2723
+msgid "Update"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:2726
+msgid "Activate"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:2757
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:2759
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:2800
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:2802
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:2908
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:2934
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:3158
+msgid "Plugin activation failed."
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:3498
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:3501
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:3503
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:3507
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:3509
+#: ../class-tgm-plugin-activation.php:3517
+#, php-format
+msgid "%1$s done."
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:3510
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:3512
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:3515
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:3518
+msgid "All installations have been completed."
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:3520
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: ../comments.php:7
+msgid "No Comments"
+msgstr ""
+
+#: ../comments.php:7
+msgid "1 Comment"
+msgstr ""
+
+#: ../comments.php:7
+msgid "Comments"
+msgstr ""
+
+#: ../comments.php:34
+msgid "Leave a Reply"
+msgstr ""
+
+#: ../comments.php:35
+msgid "Cancel Reply"
+msgstr ""
+
+#: ../comments.php:36
+msgid "Post Comment"
+msgstr ""
+
+#: ../content-grid.php:39 ../content-list.php:52 ../content.php:96
+msgid "by"
+msgstr ""
+
+#: ../content.php:71
+msgid "<span class=\"more-button\">Continue Reading</span>"
+msgstr ""
+
+#: ../footer.php:33
+msgid "Back to top"
+msgstr ""
+
+#: ../functions.php:20
+msgid "Primary Menu"
+msgstr ""
+
+#: ../functions.php:136
+msgid "Sidebar"
+msgstr ""
+
+#: ../functions.php:144
+msgid "Footer Instagram"
+msgstr ""
+
+#: ../functions.php:150
+msgid ""
+"Use the Instagram widget here. IMPORTANT: For best result set number of "
+"images to 8"
+msgstr ""
+
+#: ../functions.php:164
+msgid "Older Posts <i class=\"fa fa-angle-double-right\"></i>"
+msgstr ""
+
+#: ../functions.php:165
+msgid "<i class=\"fa fa-angle-double-left\"></i> Newer Posts"
+msgstr ""
+
+#: ../functions.php:192
+msgid "Reply"
+msgstr ""
+
+#: ../functions.php:193
+msgid "Edit"
+msgstr ""
+
+#: ../functions.php:196
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: ../functions.php:198
+msgid "Comment awaiting approval"
+msgstr ""
+
+#: ../functions.php:282
+msgid "WooCommerce Sidebar"
+msgstr ""
+
+#: ../functions.php:288
+msgid "Widgets here will appear on your WooCommerce shop and product pages."
+msgstr ""
+
+#: ../functions/customizer/sp_custom_controller.php:32
+msgid "&mdash; Select &mdash;"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:20
+msgid "Background Image"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:26
+msgid "Background Color"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:31
+msgid "Colors: General"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:36
+msgid "Colors: Sidebar"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:41
+msgid "Colors: Footer"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:46
+msgid "Colors: Posts"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:51
+msgid "Colors: Top Bar"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:56
+msgid "Footer Settings"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:61
+msgid "Page Settings"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:66
+msgid "Post Settings"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:71
+msgid "Top Bar Settings"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:76
+msgid "Logo and Header Settings"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:81
+msgid "General Settings"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:264
+msgid "(C) 2019 Solo Pine Designs, INC. All Rights Reserved."
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:453
+msgid "Disable Responsive"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:467
+msgid "Homepage Layout"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:473
+#: ../functions/customizer/sp_customizer_settings.php:495
+#: ../functions/customizer/sp_customizer_settings.php:517
+msgid "Sidebar Layout"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:474
+#: ../functions/customizer/sp_customizer_settings.php:496
+#: ../functions/customizer/sp_customizer_settings.php:518
+msgid "Full Width Layout"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:475
+#: ../functions/customizer/sp_customizer_settings.php:497
+msgid "Sidebar & Grid Layout"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:476
+#: ../functions/customizer/sp_customizer_settings.php:498
+msgid "Full Width & Grid Layout"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:477
+#: ../functions/customizer/sp_customizer_settings.php:499
+msgid "Sidebar & List Layout"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:478
+#: ../functions/customizer/sp_customizer_settings.php:500
+msgid "Full Width & List Layout"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:489
+msgid "Archive Layout"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:511
+msgid "Post Layout"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:519
+msgid "Full Width (Narrow) Layout"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:531
+msgid "Upload Logo"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:543
+msgid "Upload Logo (Retina Version)"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:556
+msgid "Top Header Padding"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:569
+msgid "Bottom Header Padding"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:584
+msgid "Disable Top Bar Social Icons"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:597
+msgid "Disable Top Bar Search"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:611
+msgid "Disable Top Bar WooCommerce Cart"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:626
+msgid "Hide Category"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:639
+#: ../inc/widgets/post_widget.php:189
+msgid "Hide Date"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:652
+msgid "Hide Author Name"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:665
+msgid "Hide Tags"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:678
+#: ../functions/customizer/sp_customizer_settings.php:758
+msgid "Hide Share Buttons"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:691
+msgid "Hide Author Box"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:704
+msgid "Hide Related Posts Box"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:717
+msgid "Hide Featured Image from top of Post"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:730
+msgid "Hide Next/Prev Post Navigation"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:743
+msgid "Turn off uppercase in post title"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:774
+msgid "Disable Footer Social"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:787
+msgid "Footer Copyright Text"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:803
+msgid "Top Bar BG"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:815
+msgid "Top Bar Menu Text Color"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:827
+msgid "Top Bar Menu Text Hover/Active Color"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:840
+msgid "Dropdown BG"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:852
+msgid "Dropdown Border Color"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:865
+msgid "Dropdown Text Color"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:877
+msgid "Dropdown Text Hover BG"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:889
+msgid "Dropdown Text Hover Color"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:902
+msgid "Top Bar Social Icons"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:914
+msgid "Top Bar Social Icons Hover"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:926
+msgid "Top Bar Search BG"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:938
+msgid "Top Bar Search Magnify Color"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:952
+msgid "Footer Instagram BG"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:964
+msgid "Footer Instagram Heading Color"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:976
+msgid "Footer Social BG"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:988
+msgid "Footer Social Icon Color"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:1000
+msgid "Footer Copyright BG"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:1012
+msgid "Footer Copyright Text Color"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:1026
+msgid "Sidebar Heading Color"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:1038
+msgid "Sidebar Heading Line Color"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:1050
+msgid "Sidebar Social Icon BG"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:1062
+msgid "Sidebar Social Icon Color"
+msgstr ""
+
+#: ../functions/customizer/sp_customizer_settings.php:1076
+msgid "Accent Color"
+msgstr ""
+
+#: ../header.php:40
+msgid "View your shopping cart"
+msgstr ""
+
+#: ../inc/templates/post-pagination.php:9
+msgid "Previous Post"
+msgstr ""
+
+#: ../inc/templates/post-pagination.php:13
+msgid "Next Post"
+msgstr ""
+
+#: ../inc/templates/post-related.php:24
+msgid "You Might Also Like"
+msgstr ""
+
+#: ../inc/widgets/about_widget.php:21
+msgid "A widget that displays an About widget"
+msgstr ""
+
+#: ../inc/widgets/about_widget.php:27
+msgid "Florence: About Me"
+msgstr ""
+
+#: ../inc/widgets/about_widget.php:91 ../inc/widgets/facebook_widget.php:90
+#: ../inc/widgets/promo_widget.php:98 ../inc/widgets/social_widget.php:119
+msgid "Title"
+msgstr ""
+
+#: ../inc/widgets/about_widget.php:97
+msgid "Image URL"
+msgstr ""
+
+#: ../inc/widgets/about_widget.php:99
+msgid ""
+"Enter the image URL you want to use. You can upload your image via Media > "
+"Add New"
+msgstr ""
+
+#: ../inc/widgets/about_widget.php:104
+msgid "About me text"
+msgstr ""
+
+#: ../inc/widgets/facebook_widget.php:19
+msgid "A widget that displays a Facebook Like Box"
+msgstr ""
+
+#: ../inc/widgets/facebook_widget.php:25
+msgid "Florence: Facebook Like Box"
+msgstr ""
+
+#: ../inc/widgets/facebook_widget.php:96
+msgid "Facebook Page URL"
+msgstr ""
+
+#: ../inc/widgets/facebook_widget.php:98
+msgid "Example. https://www.facebook.com/envato"
+msgstr ""
+
+#: ../inc/widgets/facebook_widget.php:103
+msgid "Show Faces"
+msgstr ""
+
+#: ../inc/widgets/facebook_widget.php:109
+msgid "Show Stream"
+msgstr ""
+
+#: ../inc/widgets/facebook_widget.php:115
+msgid "Show Page Cover Image"
+msgstr ""
+
+#: ../inc/widgets/post_widget.php:19
+msgid ""
+"A widget that displays your latest posts from all categories or a certain"
+msgstr ""
+
+#: ../inc/widgets/post_widget.php:25
+msgid "Florence: Latest Posts"
+msgstr ""
+
+#: ../inc/widgets/post_widget.php:137
+msgid "Latest Posts"
+msgstr ""
+
+#: ../inc/widgets/post_widget.php:142
+msgid "Title:"
+msgstr ""
+
+#: ../inc/widgets/post_widget.php:148
+msgid "Choose Layout"
+msgstr ""
+
+#: ../inc/widgets/post_widget.php:150
+msgid "Small Thumbnail"
+msgstr ""
+
+#: ../inc/widgets/post_widget.php:151
+msgid "Big Thumbnail"
+msgstr ""
+
+#: ../inc/widgets/post_widget.php:152
+msgid "Big Thumbnail w/ Overlay"
+msgstr ""
+
+#: ../inc/widgets/post_widget.php:158
+msgid "Filter by Category"
+msgstr ""
+
+#: ../inc/widgets/post_widget.php:170
+msgid "Post IDs (separate with comma):"
+msgstr ""
+
+#: ../inc/widgets/post_widget.php:172
+msgid ""
+"Display specific posts using post IDs. This option will override the "
+"category option above."
+msgstr ""
+
+#: ../inc/widgets/post_widget.php:177
+msgid "Number of posts to show:"
+msgstr ""
+
+#: ../inc/widgets/post_widget.php:183
+msgid "Add Numbering"
+msgstr ""
+
+#: ../inc/widgets/promo_widget.php:19
+msgid "Display a promo box with an image and link"
+msgstr ""
+
+#: ../inc/widgets/promo_widget.php:25
+msgid "Florence: Promo Box"
+msgstr ""
+
+#: ../inc/widgets/promo_widget.php:104
+msgid "Background Image URL"
+msgstr ""
+
+#: ../inc/widgets/promo_widget.php:106
+msgid ""
+"Enter the background image URL you want to use. You can upload your "
+"background image via Media > Add New"
+msgstr ""
+
+#: ../inc/widgets/promo_widget.php:111
+msgid "Promo Text"
+msgstr ""
+
+#: ../inc/widgets/promo_widget.php:117
+msgid "Promo Link"
+msgstr ""
+
+#: ../inc/widgets/promo_widget.php:119
+msgid "Enter a link you want the promo box to go to."
+msgstr ""
+
+#: ../inc/widgets/promo_widget.php:124
+msgid "Promo Box Height"
+msgstr ""
+
+#: ../inc/widgets/promo_widget.php:130
+msgid "Promo Box Margin Bottom"
+msgstr ""
+
+#: ../inc/widgets/promo_widget.php:136
+msgid "Open link in a new tab?"
+msgstr ""
+
+#: ../inc/widgets/social_widget.php:19
+msgid "A widget that displays your social icons"
+msgstr ""
+
+#: ../inc/widgets/social_widget.php:25
+msgid "Florence: Social Icons"
+msgstr ""
+
+#: ../inc/widgets/social_widget.php:123
+msgid "Note: Set your social links in the Customizer"
+msgstr ""
+
+#: ../inc/widgets/social_widget.php:126
+msgid "Show Facebook"
+msgstr ""
+
+#: ../inc/widgets/social_widget.php:131
+msgid "Show Twitter"
+msgstr ""
+
+#: ../inc/widgets/social_widget.php:136
+msgid "Show Instagram"
+msgstr ""
+
+#: ../inc/widgets/social_widget.php:141
+msgid "Show Pinterest"
+msgstr ""
+
+#: ../inc/widgets/social_widget.php:146
+msgid "Show Bloglovin"
+msgstr ""
+
+#: ../inc/widgets/social_widget.php:151
+msgid "Show Google Plus"
+msgstr ""
+
+#: ../inc/widgets/social_widget.php:156
+msgid "Show Tumblr"
+msgstr ""
+
+#: ../inc/widgets/social_widget.php:161
+msgid "Show Youtube"
+msgstr ""
+
+#: ../inc/widgets/social_widget.php:166
+msgid "Show Dribbble"
+msgstr ""
+
+#: ../inc/widgets/social_widget.php:171
+msgid "Show Soundcloud"
+msgstr ""
+
+#: ../inc/widgets/social_widget.php:176
+msgid "Show Vimeo"
+msgstr ""
+
+#: ../inc/widgets/social_widget.php:181
+msgid "Show Linkedin"
+msgstr ""
+
+#: ../inc/widgets/social_widget.php:186
+msgid "Show Snapchat"
+msgstr ""
+
+#: ../inc/widgets/social_widget.php:191
+msgid "Show RSS"
+msgstr ""
+
+#: ../search.php:11
+msgid "Search results for"
+msgstr ""
+
+#: ../search.php:36
+msgid "Sorry, no posts were found. Try searching for something else."
+msgstr ""
+
+#: ../searchform.php:3
+msgid "Search and hit enter..."
+msgstr ""
+
+#: ../tag.php:11
+msgid "Browsing Tag"
+msgstr ""

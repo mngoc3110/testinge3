@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Permissions-Policy" content="accelerometer=(), gyroscope=(), magnetometer=()">
+  <title>TRẦN NỮ HOÀNG LINH</title>
+    <!---custom css link-->
+    <!--reximicon-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+    <!--boxicon-->
+  <link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* carousel */
+.carousel{
+    height: 100vh;
+    margin-top: -50px;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+}
+.carousel .list .item{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0 0 0 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.carousel .list .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+}
+.carousel .list .item .content{
+    position: absolute;
+    top: 20%;
+    width: 1140px;
+    max-width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-right: 30%;
+    box-sizing: border-box;
+    color: #fff;
+    text-shadow: 0 5px 10px #0004;
+   
+}
+
+.carousel .list .item .title,
+.carousel .list .item .topic{
+    font-size: 5em;
+    font-weight: bold;
+    line-height: 1.3em;
+}
+.carousel .list .item .des{
+  font-size:20px;
+}
+.carousel .list .item .topic{
+    color: #f1683a;
+}
+.carousel .list .item .buttons{
+    display: grid;
+    grid-template-columns: repeat(2, 130px);
+    grid-template-rows: 40px;
+    gap: 5px;
+    margin-top: 20px;
+}
+.carousel .list .item .buttons button{
+    border: none;
+    background-color: #eee;
+    letter-spacing: 3px;
+    font-family: Poppins;
+    font-weight: 500;
+}
+.carousel .list .item .buttons button:nth-child(2){
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #eee;
+}
+/* thumbail */
+.thumbnail{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: max-content;
+    z-index: 100;
+    display: flex;
+    gap: 20px;
+   
+}
+.thumbnail .item{
+    width: 150px;
+    height: 220px;
+    flex-shrink: 0;
+    position: relative;
+    
+}
+.thumbnail .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+   
+}
+.thumbnail .item .content{
+    color: #fff;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+}
+.thumbnail .item .content .title{
+    font-weight: 500;
+}
+.thumbnail .item .content .description{
+    font-weight: 300;
+    
+}
+/* arrows */
+.arrowsTN{
+    position: absolute;
+    top: 80%;
+    right: 52%;
+    z-index: 100;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    
+}
+.arrowsTN button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #eee4;
+    border: none;
+    color: #ffffff;
+    font-family: monospace;
+    font-weight: bold;
+    transition: .5s;
+    background-color:black;
+}
+.arrowsTN button:hover{
+    background-color: #ffffff;
+    color: #000;
+}
+
+/* animation */
+.carousel .list .item:nth-child(1){
+    z-index: 1;
+    
+}
+
+/* animation text in first item */
+
+
+.carousel .list .item:nth-child(1) .content .author,
+.carousel .list .item:nth-child(1) .content .title,
+.carousel .list .item:nth-child(1) .content .topic,
+.carousel .list .item:nth-child(1) .content .des,
+.carousel .list .item:nth-child(1) .content .buttons
+{
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent .5s 1s linear 1 forwards;
+    width: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    width:1000px;
+    padding:30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Tạo bóng */
+    border-radius: 10px; /* Bo tròn góc của phần tử */
+}
+@keyframes showContent{
+    to{
+        transform: translateY(0px);
+        filter: blur(0px);
+        opacity: 1;
+        
+    }
+}
+.carousel .list .item:nth-child(1) .content .title{
+    animation-delay: .2s!important;
+}
+.carousel .list .item:nth-child(1) .content .topic{
+    animation-delay: .4s!important;
+}
+.carousel .list .item:nth-child(1) .content .des{
+    animation-delay: .6s!important;
+}
+.carousel .list .item:nth-child(1) .content .buttons{
+    animation-delay: .8s!important;
+}
+/* create animation when next click */
+.carousel.next .list .item:nth-child(1) img{
+    width: 150px;
+    height: 220px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    border-radius: 30px;
+    animation: showImage .5s linear 1 forwards;
+  
+    opacity: 0.8; /* Điều chỉnh độ mờ */
+}
+
+@keyframes showImage{
+    to{
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+
+.carousel.next .thumbnail .item:nth-last-child(1){
+    overflow: hidden;
+    animation: showThumbnail .5s linear 1 forwards;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+@keyframes showThumbnail{
+    from{
+        width: 0;
+        opacity: 0;
+    }
+}
+.carousel.next .thumbnail{
+    animation: effectNext .5s linear 1 forwards;
+}
+
+@keyframes effectNext{
+    from{
+        transform: translateX(150px);
+    }
+}
+
+/* running time */
+
+.carousel .time{
+    position: absolute;
+    z-index: 1000;
+    width: 0%;
+    height: 3px;
+    background-color: #f1683a;
+    left: 0;
+    top: 0;
+}
+
+.carousel.next .time,
+.carousel.prev .time{
+    animation: runningTime 3s linear 1 forwards;
+}
+@keyframes runningTime{
+    from{ width: 100%}
+    to{width: 0}
+}
+
+
+/* prev click */
+
+.carousel.prev .list .item:nth-child(2){
+    z-index: 2;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.carousel.prev .list .item:nth-child(2) img{
+    animation: outFrame 0.5s linear 1 forwards;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+}
+@keyframes outFrame{
+    to{
+        width: 150px;
+        height: 220px;
+        bottom: 50px;
+        left: 50%;
+        border-radius: 20px;
+    }
+}
+
+.carousel.prev .thumbnail .item:nth-child(1){
+    overflow: hidden;
+    opacity: 0;
+    animation: showThumbnail .5s linear 1 forwards;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+    
+}
+.carousel.next .arrows button,
+.carousel.prev .arrows button{
+    pointer-events: none;
+}
+.carousel.prev .list .item:nth-child(2) .content .author,
+.carousel.prev .list .item:nth-child(2) .content .title,
+.carousel.prev .list .item:nth-child(2) .content .topic,
+.carousel.prev .list .item:nth-child(2) .content .des,
+.carousel.prev .list .item:nth-child(2) .content .buttons
+{
+    animation: contentOut 0.5s linear 1 forwards!important;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+    z-index:1;
+}
+
+@keyframes contentOut{
+    to{
+        transform: translateY(-150px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+@media screen and (max-width: 767px) {
+    .carousel .list .item .content{
+        padding-right: 0;
+        max-width: fit-content;
+        
+    }
+    .carousel .list .item .content .title{
+        font-size: 50px;
+        
+       
+    }
+    .carousel .list .item .content .topic{
+      font-size: 50px;
+     
+  }
+  .carousel .list .item .content .des{
+    font-size: 20px;
+   
+}
+    
+    .carousel .list .item .content{
+      width:20%;
+      left:10%
+    }
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Màu đen trong suốt 50% */
+}
+
+.containerCTNB{
+    background:url("./assets/images/blog-bg.svg");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+}
+
+.rowCTNB {
+    display: flex;
+    width: 80%;
+    margin-bottom: 50px;
+
+}
+
+.circleCTNB {
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-right: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid #ccc;
+}
+.circleCTNB img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+
+.rectangleCTNB {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #f0f0f0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ccc;
+    border-radius:10px;
+    width:100px;
+    font-weight: bold;
+    color:black;
+    font-size:20px;
+}
+.rectangleCTNB p{
+  font-weight: normal;
+}
+
+
+@media (max-width: 767px) {
+  .activity-row {
+    flex-direction: column; /* Đặt các phần tử thành một cột */
+  }
+  .activity-item {
+    width: 100%; /* Chiếm toàn bộ chiều rộng của container cha */
+  }
+  .thumbnail{
+    position: absolute;
+    bottom: 50px;
+    left: 35%;
+    width: max-content;
+    z-index: 100;
+    display: flex;
+    gap: 20px;
+}
+.carousel .list .item:nth-child(1) .content .author,
+.carousel .list .item:nth-child(1) .content .title,
+.carousel .list .item:nth-child(1) .content .topic,
+.carousel .list .item:nth-child(1) .content .des,
+.carousel .list .item:nth-child(1) .content .buttons
+{
+   
+   
+    background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    width:500px;
+    padding:30px ;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Tạo bóng */
+    border-radius: 10px; /* Bo tròn góc của phần tử */
+}
+
+}
+
+</style>
+</head>
+<div class="circle">
+    <div class="icon">
+      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1v32c0 8.8 7.2 16 16 16h32zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"/></svg>
+    </div>
+    <div class="text">
+      <a href="https://www.facebook.com/trannuhoanglinh.page">Đăng kí học</a>
+    </div>
+  </div>
+  <!-- end -->
+  <body id="top">
+    <!-- 
+      - #HEADER
+    -->
+    <header>
+      <ul class="navlist"> 
+          <!-- <li><img src="./assets/LOGO.png"></li> -->
+          <li ><a href="index.html">Trang chủ</a></li>
+          <li ><a href="about.html">Giới thiệu</a></li> 
+          <li ><a href="teaching.html">Hoạt động giáo dục</a></li> 
+          <li ><a href="https://caringe.vn/">Caringe</a></li> 
+          <li><a href="achievement.html">Thành tựu</a></li>
+          <li><a href="blog.html">Blog</a></li>  
+          <!-- <li><a href="thanhtich">Kết nối</a></li>  -->
+          <li><a href="contact.html">Liên hệ</a></li> 
+          <!-- <li><img src="./assets/logocaringe.png" style="width:50px;margin-top:-10px;margin-left:50px"></li> -->
+      </ul> 
+    <div class="bx bx-menu" id="menu-icon"> </div>
+  </header>
+<!-- mở đầu -->
+
+  <!-- carousel -->
+  <div class="carousel"  >
+    <!-- list item -->
+    <div class="list" >
+        <div class="item" >
+            <img src="./assets/teaching/teaching_pic_1.jpg" >
+            <div class="overlay"></div>
+            <div class="content" id="content">
+            
+                <div class="title">LỊCH SỬ</div>
+                <div class="topic">HÌNH THÀNH</div>
+                <div class="des" >
+                    <!-- lorem 50 -->
+                    ENGONOW TUTOR được thành lập vào năm 2017 bởi Trần Nữ Hoàng Linh. Những ngày đầu, khi số lượng học sinh tăng lên nhanh chóng, Linh đã gặp phải tình trạng quá tải và không thể tự mình quản lý hết mọi học sinh. Phụ huynh tin tưởng và nhờ cô tìm kiếm gia sư phù hợp cho con em họ. Tuy nhiên, gia sư sinh viên thông thường gặp nhiều nhược điểm như khó khăn trong việc đánh giá năng lực, thiếu kỹ năng quản lý thời gian và giảng dạy, hay nghỉ ngang và thiếu trách nhiệm. Mặt khác, giáo viên lâu năm thì chi phí cao và phương pháp dạy học thường áp đặt, thiếu sự kết nối với học sinh.
+
+                </div>
+               
+            </div>
+        </div>
+        <div class="item" >
+            <img src="./assets/teaching/teaching_pic_2.jpg" >
+            <div class="content" id="content">
+                
+          
+                <div class="topic">SỨ MỆNH</div>
+                <div class="des" >
+                    Từ những khó khăn đó, Linh đã quyết tâm xây dựng một trung tâm giáo dục chất lượng, nơi tập trung đào tạo các gia sư sinh viên ưu tú. ENGONOW TUTOR cam kết mang đến một môi trường học tập tiên tiến và hiệu quả, giúp học sinh phát triển toàn diện về kiến thức và kỹ năng, chuẩn bị hành trang vững chắc cho thành công trong học tập và cuộc sống.
+                </div>
+               
+            </div>
+        </div>
+        <div class="item" style="background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);">
+            <img src="./assets/teaching/teaching_pic_3.jpg" style="background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);">
+            <div class="content" id="content">
+                
+                <div class="title">CÁC CHƯƠNG TRÌNH</div>
+                <div class="topic">ĐÀO TẠO</div>
+                <div class="des" >
+                    Hiện tại ENGONOW TUTOR cung cấp các lớp học đa dạng cả online và offline, bao gồm học kèm 1-1, kèm nhóm, luyện thi theo chương trình THCS, THPT tại TPHCM với các môn Toán - Lý - Hoá - Sinh - Anh - Tin học và các chương trình học ENGONOW - IELTS MASTER. (click link về engonow) Mỗi chương trình đều được thiết kế dựa trên nhu cầu thực tế của học sinh và phụ huynh, đảm bảo mang lại hiệu quả học tập tốt nhất.
+                </div>
+                
+            </div>
+        </div>
+       
+    </div>
+    <!-- list thumnail -->
+    <div class="thumbnail">
+        <div class="item">
+            <img src="./assets/teaching/teaching_pic_1.jpg">
+            <div class="content">
+                <div class="title">
+                   Lịch sử hình thành 
+                </div>
+                <div class="description">
+                    Thành lập từ năm 2017.....
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="./assets/teaching/teaching_pic_2.jpg">
+            <div class="content">
+                <div class="title">
+                    Sứ mệnh
+                </div>
+                <div class="description">
+                    Quyết tâm....
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="./assets/teaching/teaching_pic_3.jpg">
+            <div class="content">
+                <div class="title">
+                    Chương trình đào tạo
+                </div>
+                <div class="description">
+                    Đa dạng....
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <!-- next prev -->
+
+    <div class="arrowsTN">
+        <button id="prev"><</button>
+        <button id="next">></button>
+    </div>
+    <!-- time running -->
+    <div class="time"></div>
+</div>
+
+
+<div class="activity-container" style="margin-top:100px" >
+    
+    <h2 class= "active-title" style="margin-bottom:50px;margin-top:50px;font-size:45px">PHƯƠNG PHÁP GIẢNG DẠY</h2>
+    <!-- Hàng 1 -->
+    <div class="activity-row" >
+      <div class="activity-item" style="margin-right:20px;margin-right:20px">
+        <img src="./assets/index/index_18.jpg" alt="" class="activity-img">
+        <h2 class="activity-category">Sáng tạo và tương tác</h2>
+        <p class="activity-description">
+          Tại ENGONOW TUTOR, phương pháp giảng dạy không ngừng được đổi mới và sáng tạo để phù hợp với xu hướng giáo dục hiện đại. Cô Linh và đội ngũ gia sư áp dụng phương pháp giảng dạy tương tác, khuyến khích học sinh tham gia tích cực vào quá trình học tập thông qua các hoạt động nhóm, thảo luận và thực hành.
+        </p>
+        <span class="activity-date">25/7/2023</span>
+      </div>
+      <div class="activity-item"  style="margin-right:20px;margin-right:20px">
+        <img src="./assets/index/index_18.jpg" alt="" class="activity-img">
+        <h2 class="activity-category">Tích hợp công nghệ</h2>
+        <p class="activity-description">
+          Công nghệ được tích hợp vào quá trình giảng dạy để tạo ra các bài học sinh động, trực quan và dễ hiểu. Học sinh được tiếp cận với các công cụ học tập hiện đại, giúp tăng cường sự hứng thú và hiệu quả học tập.
+        </p>
+        <span class="activity-date">25/7/2023</span>
+      </div>
+      <div class="activity-item"  style="margin-right:20px;margin-right:20px">
+        <img src="./assets/index/index_18.jpg" alt="" class="activity-img">
+        <h2 class="activity-category">Phát triển kĩ năng toàn diện</h2>
+        <p class="activity-description">
+          Không chỉ tập trung vào kiến thức, phương pháp giảng dạy tại ENGONOW TUTOR còn chú trọng phát triển kỹ năng sống và vận dụng thực tế cho học sinh. Các buổi học được thiết kế để rèn luyện kỹ năng tư duy logic, kỹ năng giao tiếp và làm việc nhóm, giúp học sinh tự tin và sẵn sàng chinh phục mọi thử thách.
+
+        </p>
+        <span class="activity-date">25/7/2023</span>
+      </div>
+      <div class="activity-item"  style="margin-right:20px;margin-right:20px">
+        <img src="./assets/index/index_18.jpg" alt="" class="activity-img">
+        <h2 class="activity-category">Gieo thói quen tốt</h2>
+        <p class="activity-description">
+          Tại ENGONOW TUTOR, chúng tôi khuyến khích và hỗ trợ học sinh phát triển những thói quen học tập tốt từ sớm, giúp các em hình thành nền tảng vững chắc cho sự phát triển lâu dài. Thói quen tốt giúp học sinh tự giác, tự kỷ luật và nâng cao hiệu quả học tập.
+
+        </p>
+        <span class="activity-date">25/7/2023</span>
+      </div>
+      <div class="activity-item"  style="margin-right:20px;margin-right:20px">
+        <img src="./assets/index/index_18.jpg" alt="" class="activity-img">
+        <h2 class="activity-category">Tư duy nguyên nhân - kết quả</h2>
+        <p class="activity-description">
+          Phương pháp giảng dạy tại ENGONOW TUTOR giúp học sinh phát triển tư duy nguyên nhân - kết quả, rèn luyện khả năng phân tích và giải quyết vấn đề. Kỹ năng này không chỉ hữu ích trong học tập mà còn trong cuộc sống hàng ngày.
+
+        </p>
+        <span class="activity-date">25/7/2023</span>
+      </div>
+    </div>
+  </div>
+  
+
+<!-- CÁC CHƯƠNG TRÌNH NỔI BẬT -->
+
+<div class="containerCTNB"  >
+    <h2 style="font-size:50px;color:black;margin-bottom:100px;margin-top:100px">CÁC CHƯƠNG TRÌNH NỔI BẬT</h2>
+    <div class="rowCTNB">
+        <div class="circleCTNB">
+            <img src="./assets/index/index_18.jpg" >
+        </div>
+        <div class="rectangleCTNB">HỌC KÈM NHÓM
+          <p>Chương trình học kèm nhóm tại ENGONOW TUTOR được thiết kế để học sinh có thể học hỏi lẫn nhau, cùng tiến bộ và phát triển. Mỗi nhóm học được dẫn dắt bởi một gia sư giỏi, tận tâm và có phương pháp giảng dạy sáng tạo. Phương pháp học tập tương tác giúp học sinh nắm vững kiến thức, rèn luyện kỹ năng giao tiếp và làm việc nhóm, tạo ra môi trường học tập sôi nổi và hiệu quả.</p>
+        </div>
+    </div>
+    <div class="rowCTNB">
+        <div class="rectangleCTNB">LUYỆN THI
+          <p> ENGONOW TUTOR cung cấp các khóa luyện thi chuyên sâu cho các kỳ thi quan trọng như tuyển sinh lớp 10 và tốt nghiệp THPT. Các khóa học này được thiết kế đặc biệt để giúp học sinh nắm vững kiến thức, kỹ năng làm bài thi và tự tin đạt kết quả cao. Đội ngũ gia sư giàu kinh nghiệm sẽ hướng dẫn học sinh từng bước, từ ôn luyện kiến thức cơ bản đến luyện tập các dạng đề thi nâng cao, đảm bảo học sinh có sự chuẩn bị tốt nhất cho kỳ thi.
+          </p>
+        </div>
+        <div class="circleCTNB" style="margin-left:20px">
+            <img src="./assets/index/index_18.jpg" >
+        </div>
+    </div>
+    <div class="rowCTNB"> <div class="circleCTNB">
+            <img src="./assets/index/index_18.jpg" >
+        </div>
+        <div class="rectangleCTNB">KÈM 1-1 CÁ NHÂN HOÁ CAO
+          <p> Chương trình kèm 1-1 tại ENGONOW TUTOR là một giải pháp tối ưu cho những học sinh cần tiến độ học tập nhanh hoặc cần kịp thời lấy lại gốc kiến thức. Với chương trình này, mỗi học sinh sẽ được học cùng một gia sư, người sẽ xây dựng một lộ trình học tập cá nhân hóa dựa trên nhu cầu và mục tiêu riêng của học sinh. Phương pháp này đảm bảo rằng mỗi học sinh đều nhận được sự chú ý đặc biệt, giúp họ nhanh chóng cải thiện kết quả học tập và đạt được mục tiêu đề ra. Gia sư sẽ theo dõi sát sao tiến độ học tập của học sinh, điều chỉnh phương pháp giảng dạy kịp thời để đảm bảo hiệu quả tối đa.</p>
+        </div>
+    </div>
+</div>
+
+
+<!-- Cảm nhận học sinh -->
+<section class="comment">
+    <div class="container" >
+        <h2 class="h2 section-title">CÂU CHUYỆN THÀNH CÔNG</h2>
+        <div class="testimonials-container" style="margin-left:230px">
+  
+            <div class="testimonials">
+                <div class="testimonial">
+                    <div class="student-name">
+                      Học Sinh Đạt Thành Tích Cao Trong Kỳ Thi Tuyển Sinh Lớp 10
+                    </div>
+                    <div class="testimonial-content">
+                      Một trong những câu chuyện thành công nổi bật tại ENGONOW TUTOR là em Nguyễn Ngọc Quỳnh Anh, học sinh từng gặp khó khăn trong việc học toán. Nhờ sự hướng dẫn tận tâm của gia sư tại trung tâm, em đã cải thiện đáng kể kết quả học tập và đạt điểm mong muốn trong kỳ thi tuyển sinh lớp 10, mở ra nhiều cơ hội học tập trong tương lai.
+
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="student-name">
+                      Nhóm Học Sinh Được Nhận Vào Trường Đại Học Top
+                    </div>
+                    <div class="testimonial-content">
+                      Một nhóm học sinh từ trường tư cấp 3 đã cùng nhau học kèm tại ENGONOW TUTOR. Nhờ phương pháp giảng dạy linh hoạt và sự hỗ trợ tận tình của đội ngũ gia sư, tất cả các em đều đạt được điểm số tốt và được nhận vào các trường đại học cao điểm tại TPHCM.
+
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="student-name">
+                        Học sinh phát triển toàn diện
+                    </div>
+                    <div class="testimonial-content">
+                      Nhiều học sinh tại ENGONOW TUTOR không chỉ cải thiện kết quả học tập mà còn phát triển toàn diện về kỹ năng sống. Em Khánh Ngân, từng rất nhút nhát và thiếu tự tin, đã trở nên tự tin hơn và tham gia tích cực vào các hoạt động ngoại khóa sau khi học tập tại trung tâm.
+
+                    </div>
+                </div>
+                
+            </div>     
+        </div>
+    </div>
+</section>
+
+ <!-- 
+    - #FOOTER
+  -->
+  <footer class="footer" style="background-image: url('./assets/images/footer-bg.png')" >
+    <div class="footer-top section">
+      <div class="container grid-list">
+        <div class="footer-brand">
+          <ul class="footer-list">
+            <li>
+              <p class="footer-list-title">Thông tin liên hệ</p>
+            </li>
+          </ul>
+          <div class="wrapper">
+            <span class="span">Email:</span>
+            <a href="mailto:info@eduweb.com" class="footer-link">linhtran.nh@gmail.com</a>
+          </div>
+        </div>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Tìm hiểu thêm</p>
+          </li>
+          <li>
+            <a href="#" class="footer-link">Thông tin</a>
+          </li>
+          <li>
+            <a href="#category" class="footer-link">Môn học</a>
+          </li>
+          <li>
+            <a href="#blog" class="footer-link">Thành tích</a>
+          </li>
+          <li>
+            <a href="#video" class="footer-link">Video</a>
+          </li>
+        </ul>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Liên hệ</p>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/trannuhoanglinh.page" class="footer-link">Facebook</a>
+          </li>
+          <li>
+            <a href="https://www.tiktok.com/@trannuhoanglinh" class="footer-link">TikTok</a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/channel/UCgl9icMERkPZwhSi1QIuc4w" class="footer-link">Youtube</a>
+          </li>
+          <li>
+            <a href="thanhtich" class="footer-link">Ứng tuyển</a>
+          </li>
+        </ul>
+        <div class="footer-list">
+          <p class="footer-list-title">Hỏi đáp</p>
+          <p class="footer-list-text">
+            Đặt câu hỏi tại đây
+          </p>
+              <form action="https://formsubmit.co/linhtran.nh@gmail.com"  method="post" class="newsletter-form" onsubmit="handleSubmit2(event)">
+            <input type="gmail" id ="mail2" name="message" placeholder="Email + câu hỏi" required class="input-field">
+            <input type="hidden" name="_captcha" value="false">
+            <button type="submit" class="btn has-before" style="width:20%">
+              <span class="span" >Gửi</span>
+              <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+            </button>
+          </form>
+          <ul class="social-list">
+            <li>
+              <a href="https://www.facebook.com/trannuhoanglinh.page" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.tiktok.com/@trannuhoanglinh" class="social-link">
+                <ion-icon name="logo-tiktok"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/trannuhoanglinh/" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/channel/UCgl9icMERkPZwhSi1QIuc4w" class="social-link">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">  
+      </div>
+    </div>
+  </footer>
+  <!-- 
+    - #BACK TO TOP
+  -->
+  <a href="#top" class="back-top-btn" aria-label="back top top" data-back-top-btn>
+    <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+  </a>
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js" defer></script>
+<!-- gửi mail -->
+<script>
+    function handleSubmit2(event) {
+      event.preventDefault(); 
+      var ND = document.getElementById('mail2').value;
+      document.getElementById('mail2').value = ""; 
+      var formData = new FormData();
+      formData.append('mail2', ND); 
+      fetch("https://formsubmit.co/ajax/linhtran.nh@gmail.com", {
+        method: "POST",
+        headers: { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+            message: ND,
+
+        })
+    })
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.log(error)); 
+    window.alert("GỬI THÀNH CÔNG");
+  }
+
+
+
+//step 1: get DOM
+let nextDom = document.getElementById('next');
+let prevDom = document.getElementById('prev');
+
+let carouselDom = document.querySelector('.carousel');
+let SliderDom = carouselDom.querySelector('.carousel .list');
+let thumbnailBorderDom = document.querySelector('.carousel .thumbnail');
+let thumbnailItemsDom = thumbnailBorderDom.querySelectorAll('.item');
+let timeDom = document.querySelector('.carousel .time');
+
+
+
+
+
+
+
+
+nextDom.onclick = function(){
+    showSlider('next');    
+}
+
+prevDom.onclick = function(){
+    showSlider('prev');    
+}
+
+
+function showSlider(type){
+    let  SliderItemsDom = SliderDom.querySelectorAll('.carousel .list .item');
+    let thumbnailItemsDom = document.querySelectorAll('.carousel .thumbnail .item');
+    
+    if(type === 'next'){
+        SliderDom.appendChild(SliderItemsDom[0]);
+        thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
+       
+    }else{
+        SliderDom.prepend(SliderItemsDom[SliderItemsDom.length - 1]);
+        thumbnailBorderDom.prepend(thumbnailItemsDom[thumbnailItemsDom.length - 1]);
+       
+    }
+    
+    
+}
+
+
+  </script> 
+  
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="/assets/test.js"></script>
+</body>
+</html>

@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Permissions-Policy" content="accelerometer=(), gyroscope=(), magnetometer=()">
+  <title>TRẦN NỮ HOÀNG LINH</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+<style>
+  .left-arrow{
+    font-size: 50px;
+    font-weight: bold; /* Làm cho mũi tên đậm hơn */
+    width: 0;
+    height: 0;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    border-right: 25px solid hsl(170, 75%, 41%);
+    
+  }
+  .right-arrow{
+    font-size: 50px;
+    font-weight: bold; /* Làm cho mũi tên đậm hơn */
+    width: 0;
+    height: 0;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    border-left: 25px solid hsl(170, 75%, 41%);
+  }
+.anhbiaprofile{
+    border-radius:10%;
+}
+.ThongTinThem p:after {
+  content: " ";
+}
+.hero-banner {
+    position: relative; /*  Đặt ảnh hồ sơ trong một vùng tương đối */
+  } 
+  .anhbiaprofile img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%; /* Adjust width as needed */
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,1);
+    display: none;
+  }
+  .anhbiaprofile img:first-child {
+    display: block;
+  }
+  .ThongTinThem {
+    display: none; /* Ẩn ban đầu */
+    color: #000000; /* Màu chữ */
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease; /* Hiệu ứng chuyển đổi mượt mà */
+    margin-bottom:30px;
+    box-shadow: black ;
+  }
+  .ThongTinThem:target {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+.slider{
+    /* background-color: red; */
+    color: #000000;
+    margin-top:100px;
+    width: 100%;
+    height: 70vh;
+    position: relative;
+        
+   
+   
+}
+.slider .list .item{
+    
+    
+   
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+}
+.slider .list .item .content{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    max-width: 100%;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, 800px);
+    text-align: left;
+    gap: 80px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-family: Poppins;
+    text-shadow: 0 0 80px #000;
+}
+.slider .list .item .content h2{
+    font-size: 10em;
+    font-family: 'Bebas Neue', sans-serif;
+    line-height: 1em;
+    transform: translateY(-100%);
+    transition: transform 1s;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    position: relative;
+    left:100px;
+}
+.slider .list .item .content p{
+    
+    justify-content: start;
+    align-items: end;
+    padding-bottom: 25px;
+   position:relative;
+   right:100px;
+    border: 2px solid #333; /* Đường viền khung */
+    padding: 20px; /* Khoảng cách bên trong khung */
+    border-radius: 10px; /* Bo tròn góc khung */
+    background-color: #f9f9f9; /* Màu nền khung */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Bóng đổ khung */
+}
+/* item default */
+/* default  */
+.slider .list .item .image{
+    filter: blur(30px);
+   
+}
+.slider .list .item{
+    pointer-events: none;
+    opacity: 0;
+}
+/* item active */
+.slider .list .item{
+    pointer-events: auto;
+    opacity: 1;
+}
+.slider .list .item .content h2{
+    transform: translateY(0);
+}
+/* item phía sau */
+/* arrows */
+.arrows{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;
+    width: var(--width-default);
+    display: flex;
+    justify-content: space-between;
+}
+.arrows button{
+    all: unset;
+    cursor: pointer;
+}
+
+@keyframes showModel{
+    from{
+        transform: translateX(-50%) scale(1.3) translateY(88px);
+    }
+}
+.arrows button.d-none{
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.GTCL{
+    align-items: center;
+    justify-content: center;
+   
+}
+.containerGTCL {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+   
+}
+.rectangle {
+    width: 250px;
+    height: 250px;
+    background-color: #fff;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+    flex-direction: column; /* Sắp xếp theo cột */
+    
+
+}
+.rectangle:hover {
+  transform: scale(1.05) translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+.rectangle img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 15px;
+    z-index: 1;
+}
+.text-container {
+    margin-top: 50px;
+    width: 80%;
+    text-align: left;
+    font-size: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s;
+    align-items: center;
+    justify-content: center;
+    margin-bottom:100px;
+    color:black;
+
+    
+}
+.btn-read-more {
+  background-color: hsl(170, 75%, 41%); /* Màu nền */
+  
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer; 
+  z-index: 0;
+  border-radius: 10px; /* Tạo góc bo tròn */
+  position:relative;
+ 
+  
+ 
+}
+
+@media(max-width:1971px){
+  .text-container{
+    margin-left: 120px;
+  }
+}
+@media(max-width:1640px){
+  
+.text-container{
+  margin-left:60;
+  width:900px
+}
+.containerGTCL{
+  width:1500px;
+  justify-content: center;
+  align-items: center;
+  margin-left:60px
+}
+}
+@media(max-width:1500px){
+  .containerGTCL{
+    width:1400px
+  }
+  .slider .list .item .content h2{
+    font-size:150px;
+    width:80px;
+  }
+  .slider .list .item .content p{
+    width:700px;
+    position:relative;
+    right:250px;  
+  }
+}
+@media(max-width:1452px){
+  .containerGTCL{
+    width:1300px;
+    margin-left:100px;
+  }
+  .slider .list .item .content h2{
+    font-size:150px;
+    width:80px;
+  }
+  .slider .list .item .content p{
+    width:500px;
+    position:relative;
+    margin-bottom:-200px;
+    right:250px;  
+  }
+}
+
+@media(max-width:767px){
+  .text-container{
+    width: 400px;
+    margin-left: 200px;
+  }
+  #second{
+    display: none;
+  }
+  .containerGTCL{
+    width: 600px;
+  }
+  .slider .list .item .content h2{
+    font-size:50px;
+    width:80px;
+    position: relative;
+    left:300px
+  }
+  .slider .list .item .content p{
+    width:500px;
+    position:relative;
+    margin-bottom:-400px;
+    right:750px;  
+    top:200px;
+  }
+  .list{
+    position: relative;
+    top:300px;
+  }
+  .img-cover{
+      position:relative;
+      left:150px;
+      top:30px;
+  }
+}
+
+
+</style>
+</head>
+<div class="circle">
+  <div class="icon">
+    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1v32c0 8.8 7.2 16 16 16h32zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"/></svg>
+  </div>
+  <div class="text">
+    <a href="https://www.facebook.com/trannuhoanglinh.page">Đăng kí học</a>
+  </div>
+</div>
+<body id="top">
+  <!-- 
+    - #HEADER
+  -->
+<header>
+<ul class="navlist"> 
+    <li ><a href="index.html">Trang chủ</a></li>
+    <li ><a href="about.html">Giới thiệu</a></li> 
+    <li ><a href="teaching.html">Hoạt động giáo dục</a></li> 
+    <li ><a href="https://caringe.vn/">Caringe</a></li> 
+    <li><a href="achievement.html">Thành tựu</a></li>
+    <li><a href="blog.html">Blog</a></li>  
+    <li><a href="contact.html">Liên hệ</a></li> 
+</ul> 
+<div class="bx bx-menu" id="menu-icon"> </div>
+</header>
+<main>
+<article>
+    <!-- 
+    - Giới thiệu chính
+    -->
+    <section class="section hero has-bg-image" id="home" aria-label="home" style="background-image: url('./assets/images/hero-bg.svg');z-index:999;">
+        <div class="container">
+          <div class="hero-content">
+            <h1 class="h1 section-title"><span class="ten">TRẦN NỮ HOÀNG LINH</span> </h1>
+            <p class="hero-text" style="font-weight:1000;margin-top:20px;display:flex">Từ Cô Gái Độc Lập Đến Nhà Sáng Lập Và Quản Lý ENGONOW TUTOR Và CARINGE</p>
+            <p class="ThongTinThem">Trần Nữ Hoàng Linh, một người phụ nữ đầy nghị lực và quyết tâm, đã có một hành trình đầy cảm hứng từ khi còn là một cô gái độc lập cho đến khi trở thành người sáng lập và quản lý của ENGONOW TUTOR và thương hiệu thời trang CARINGE.
+                Ngay từ cấp 2, Linh đã thể hiện rõ sự độc lập và tự chủ trong các quyết định quan trọng của cuộc đời mình. Những trải nghiệm trong giai đoạn này đã giúp Linh nhận ra rằng có những quyết định mang lại kết quả tốt và những quyết định không như ý. Điều này giúp Linh hiểu rõ rằng yếu tố quan trọng để ra quyết định đúng đắn là nhận thức đúng và kỹ năng tốt để hành động chuẩn xác.
+                Với niềm tin mạnh mẽ rằng "Giáo dục đúng hướng sẽ thay đổi tích cực lên cuộc đời của ai đó", Linh đã dành trọn tâm huyết và thời gian để học hỏi và phát triển bản thân. Cô tin rằng mỗi ngày học tập và phát triển bản thân sẽ góp phần lớn cho các thành công trong tương lai.
+                Khi còn là sinh viên, Linh đã bắt đầu sự nghiệp giảng dạy và nhanh chóng nhận ra rằng không phải tất cả các phương pháp giáo dục hiện tại đều đáp ứng được nhu cầu thực sự của học sinh. Điều này thôi thúc cô phải tìm kiếm và áp dụng những phương pháp giảng dạy sáng tạo và hiệu quả hơn. Linh đã quyết định thành lập ENGONOW TUTOR với sứ mệnh mang đến một môi trường học tập tiên tiến và hiệu quả cho học sinh.
+                Với phương pháp giảng dạy tương tác và sáng tạo, ENGONOW TUTOR nhanh chóng trở thành địa chỉ tin cậy cho phụ huynh và học sinh tại TP.HCM. Trung tâm tập trung vào việc phát triển toàn diện kiến thức và kỹ năng sống cho học sinh, giúp các em không chỉ nắm vững kiến thức mà còn phát triển tư duy logic và kỹ năng giải quyết vấn đề.
+                Không dừng lại ở lĩnh vực giáo dục, Linh tiếp tục mở rộng tầm ảnh hưởng của mình sang lĩnh vực thời trang với thương hiệu CARINGE. Thương hiệu này không chỉ mang đến những sản phẩm thời trang hiện đại và thanh lịch mà còn đồng hành cùng các bạn trên con đường phát triển bản thân và chinh phục những mục tiêu lớn trong cuộc sống.
+                Với slogan "Định hình tư duy - Phát triển bản thân - Chinh phục mục tiêu", Linh luôn hướng đến việc giúp đỡ học sinh và khách hàng của mình đạt được những thành công trong cuộc sống thông qua giáo dục đúng hướng và sự tự tin từ phong cách thời trang.
+                Hành trình từ một cô gái độc lập và tự chủ đến một nhà sáng lập và quản lý thành công của Trần Nữ Hoàng Linh là minh chứng sống động cho niềm tin rằng "Giáo dục đúng hướng sẽ thay đổi tích cực lên cuộc đời của ai đó". Cô không chỉ thành công trong việc xây dựng và phát triển các thương hiệu mà còn là người truyền cảm hứng mạnh mẽ cho thế hệ trẻ về việc không ngừng học tập và phát triển bản thân để chinh phục mọi mục tiêu trong cuộc sống.</p>
+            <button class="btn has-before" id="myButton"><span class="span">Tìm hiểu thêm</span></button>
+        </div>
+        <figure class="hero-banner">
+            
+            <!-- them hinh chuyen nghiep -->
+             
+              <img src="./assets/about/about_2.jpg"  class="img-cover" style="border-radius:10px;box-shadow:0px 5px 10px rgba(0,0,0,1);width:100%">
+          
+            <img src="./assets/images/hero-shape-2.png" width="622" height="551" alt="" class="shape hero-shape-2">
+          </figure>
+        </div>
+    </section>   
+<!-- 
+tầm nhìn sứ mạng
+ -->
+ 
+<section class="slider">
+    <div class="list">
+        <div class="item ">
+           
+                <div class="content" style="position:relative;top:300px;margin-top:400px">
+                    <h2 id="fix">TẦM NHÌN</h2>
+                    <p>Với tầm nhìn chiến lược và niềm đam mê mãnh liệt với giáo dục, Trần Nữ Hoàng Linh hướng tới việc xây dựng hệ thống giáo dục ENGONOW trở thành biểu tượng của chất lượng và sự đổi mới trong giảng dạy, không chỉ tại TPHCM mà còn trên toàn quốc. Cô mơ ước tạo ra một cộng đồng nơi mỗi cá nhân đều được phát triển toàn diện, trở thành con người hướng tới chân, thiện, mỹ. Linh không ngừng nỗ lực để truyền cảm hứng và tạo động lực cho thế hệ trẻ, giúp họ tự tin chinh phục mọi mục tiêu và thành công trong cuộc sống.</p>
+                </div>
+            </div>
+        <div class="item " >
+           
+                <div class="content" style="position:relative;top:-600px;flex-direction: row-reverse;">
+                    <h2 id="fix">SỨ MỆNH</h2>
+                    <p>Trần Nữ Hoàng Linh đặc biệt quan tâm đến môi trường giáo dục chất lượng, nơi học sinh không chỉ nắm vững kiến thức mà còn phát triển toàn diện về kỹ năng và tư duy. Cô luôn đặt học sinh là trung tâm, với mong muốn trang bị cho các em hành trang vững chắc để thành công trong học tập và cuộc sống. Linh tin rằng "Giáo dục đúng hướng sẽ thay đổi tích cực lên cuộc đời của ai đó", và qua ENGONOW TUTOR, cô cam kết tạo ra những cơ hội học tập và phát triển tốt nhất cho mỗi học sinh.</p>
+                    
+                </div>
+            </div>  
+        </div>
+    </section>
+<!-- 
+giá trị cốt lõi
+-->
+<!-- cần thêm hình -->
+<h2 style="align-items: cetner;justify-content:center;display:flex; margin-bottom:50px;font-size:70px;color:black">GIÁ TRỊ CỐT LÕI</h2>
+<div class="containerGTCL">
+  <button class="arrow left-arrow"></button>
+ 
+    <div class="rectangle" id="First" data-text="Tâm niệm giáo dục|Linh tin rằng Giáo dục đúng hướng sẽ thay đổi tích cực lên cuộc đời của ai đó. Điều này thúc đẩy chúng tôi luôn nỗ lực mang lại sự phát triển toàn diện về kiến thức, kỹ năng và tư duy cho học sinh.">
+        <img src="./assets/index/index_16.jpg" alt="Image 1">
+        <button class="btn-read-more">Tìm hiểu thêm</button>
+    </div>
+    <div class="rectangle" id="second" data-text="Chất lượng và sáng tạo|Cam kết cung cấp dịch vụ giáo dục và sản phẩm thời trang chất lượng cao, liên tục đổi mới và sáng tạo để đáp ứng nhu cầu và mong đợi của học sinh và khách hàng.">
+        <img src="./assets/about/about_3.jpg" alt="Image 2">
+        <button class="btn-read-more">Tìm hiểu thêm</button>
+    </div>
+    <div class="rectangle" id="second" data-text="Phát triển cá nhân| Chú trọng phát triển không chỉ về học thuật mà còn về kỹ năng sống và phong cách cá nhân, giúp học sinh và khách hàng tự tin và sẵn sàng chinh phục mọi thử thách.">
+        <img src="./assets/about/about_3.jpg" alt="Image 3">
+        <button class="btn-read-more">Tìm hiểu thêm</button>
+    </div>
+    <div class="rectangle" id="second" data-text="Tận tâm và đam mê|Linh và đội ngũ của mình luôn làm việc với sự tận tâm và đam mê, hướng tới mục tiêu mang lại những giá trị tốt nhất cho học sinh và khách hàng.">
+        <img src="./assets/about/about_5.jpg" alt="Image 4">
+        <button class="btn-read-more">Tìm hiểu thêm</button>
+    </div>
+    <div class="rectangle"  id="second" data-text="Trách nhiệm xã hội|Chúng tôi thực hiện mọi hoạt động với tinh thần trách nhiệm cao, đóng góp vào sự phát triển của cộng đồng thông qua giáo dục chất lượng và thời trang bền vững.">
+        <img src="./assets/about/about_6.jpg" alt="Image 5">
+        <button class="btn-read-more">Tìm hiểu thêm</button>
+    </div>
+    <div class="rectangle" id="second" data-text="Xây dựng cộng đồng tích cực|Với mong muốn tạo ra một cộng đồng tích cực, chúng tôi luôn hướng tới việc giúp mọi người phát triển toàn diện và hướng tới những giá trị chân - thiện - mỹ, góp phần xây dựng một xã hội tốt đẹp hơn.">
+        <img src="./assets/index/index_6.jpg" alt="Image 6">
+        <button class="btn-read-more">Tìm hiểu thêm</button>
+    </div>
+    <button class="arrow right-arrow" id="rightarrow"></button>
+</div>
+<div class="text-container" id="text-container" >
+    <p style="font-weight: bold;font-size:30px">Tâm niệm giáo dục</p>
+    <p style="margin-left:50px;">Linh tin rằng "Giáo dục đúng hướng sẽ thay đổi tích cực lên cuộc đời của ai đó". Điều này thúc đẩy chúng tôi luôn nỗ lực mang lại sự phát triển toàn diện về kiến thức, kỹ năng và tư duy cho học sinh.
+    </p>
+  
+    
+</div>
+<!-- 
+- thành tích tiêu biểu
+-->
+<section class="section blog has-bg-image" id="blog" aria-label="blog" style="background-image: url('./assets/images/blog-bg.svg')" >
+    <div class="container">
+        <h2 class="h2 section-title">ĐỘI NGŨ HỖ TRỢ</h2>
+          <!-- hình profile từng người -->
+        <div class="testimonials-container"> 
+<span class="arrow left-arrow" onclick="scrollRight2hang1()" ></span>
+            <div class="testimonials" id="hang1">
+                <div class="testimonial">
+                    <div class="blog-card">
+                    <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;">
+                        <img src="./assets/about/about_7.jpg" width="370" height="370" loading="lazy" alt="Become A Better Blogger: Content Planning" class="img-cover">
+                    </figure>
+                    <div class="card-content" style="margin-top:10px">
+                        <a href="#" class="card-subtitle">ĐOÀN NGỌC ANH</a>
+                        <h3 class="h3"><a href="#" class="card-title">TOÁN CẤP 3</a></h3>
+                    </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="blog-card">
+                        <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;">
+                        <img src="./assets/about/about_8.jpg" width="370" height="370" loading="lazy"alt="Become A Better Blogger: Content Planning" class="img-cover">
+                        </figure>
+                        <div class="card-content" style="margin-top:10px">
+                            <a href="#" class="card-subtitle">ĐOÀN NGỌC ÁNH</a>
+                            <h3 class="h3"><a href="#" class="card-title">HOÁ - SINH CẤP 3</a></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="blog-card">
+                        <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;">
+                        <img src="./assets/about/about_9.jpg" width="370" height="370" loading="lazy"alt="Become A Better Blogger: Content Planning" class="img-cover">
+                        </figure>
+                        <div class="card-content" style="margin-top:10px">
+                            <a href="#" class="card-subtitle">VƯƠNG QUỐC PHONG</a>
+                            <h3 class="h3"><a href="#" class="card-title">TOÁN - LÝ CẤP 3</a>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="blog-card">
+                        <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;">
+                        <img src="./assets/about/about_10.jpg" width="370" height="370" loading="lazy"alt="Become A Better Blogger: Content Planning" class="img-cover">
+                        </figure>
+                        <div class="card-content" style="margin-top:10px">
+                            <a href="#" class="card-subtitle">NGUYỄN LÊ MINH NGỌC</a>
+                            <h3 class="h3"><a href="#" class="card-title">TOÁN CẤP 2 - CẤP 3</a></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="blog-card">
+                    <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;">
+                        <img src="./assets/about/about_11.jpg" width="370" height="370" loading="lazy"alt="Become A Better Blogger: Content Planning" class="img-cover">
+                    </figure>
+                        <div class="card-content" style="margin-top:10px">
+                            <a href="#" class="card-subtitle">TRẪN VĨ QUANG</a>
+                            <h3 class="h3"><a href="#" class="card-title">TOÁN - LÝ CẤP 3</a></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="blog-card">
+                        <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;">
+                        <img src="./assets/about/about_12.jpg" width="370" height="370" loading="lazy"alt="Become A Better Blogger: Content Planning" class="img-cover">
+                    </figure>
+                        <div class="card-content" style="margin-top:10px">
+                            <a href="#" class="card-subtitle">DƯƠNG MINH THIÊN</a>
+                            <h3 class="h3"><a href="#" class="card-title">TOÁN - HOÁ CẤP 3</a></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="blog-card">
+                        <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;">
+                        <img src="./assets/about/about_13.jpg" width="370" height="370" loading="lazy"alt="Become A Better Blogger: Content Planning" class="img-cover">
+                        </figure>
+                        <div class="card-content" style="margin-top:10px">
+                            <a href="#" class="card-subtitle">HỨA TRƯỜNG THÀNH</a>
+                            <h3 class="h3"><a href="#" class="card-title">TOÁN CẤP 3</a></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="blog-card">
+                        <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;">
+                        <img src="./assets/about/about_14.jpg" width="370" height="370" loading="lazy"alt="Become A Better Blogger: Content Planning" class="img-cover">
+                    </figure>
+                        <div class="card-content" style="margin-top:10px">
+                            <a href="#" class="card-subtitle">NGUYỄN NGỌC TÚ TRÂM</a>
+                            <h3 class="h3"><a href="#" class="card-title">TOÁN CẤP 3</a></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="blog-card">
+                        <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;">
+                        <img src="./assets/about/about_15.jpg" width="370" height="370" loading="lazy"alt="Become A Better Blogger: Content Planning" class="img-cover">
+                    </figure>
+                        <div class="card-content" style="margin-top:10px">
+                            <a href="#" class="card-subtitle">LÊ MINH TUẤN</a>
+                            <h3 class="h3"><a href="#" class="card-title">TOÁN CẤP 3</a></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<span class="arrow right-arrow" onclick="scrollRighthang1()" ></span>
+        </div>
+</section>
+<!-- 
+- #FOOTER
+-->
+  <footer class="footer" style="background-image: url('./assets/images/footer-bg.png')" >
+    <div class="footer-top section">
+      <div class="container grid-list">
+        <div class="footer-brand">
+          <ul class="footer-list">
+            <li>
+              <p class="footer-list-title">Thông tin liên hệ</p>
+            </li>
+          </ul>
+          <div class="wrapper">
+            <span class="span">Email:</span>
+            <a href="mailto:info@eduweb.com" class="footer-link">linhtran.nh@gmail.com</a>
+          </div>
+        </div>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Tìm hiểu thêm</p>
+          </li>
+          <li>
+            <a href="#" class="footer-link">Thông tin</a>
+          </li>
+          <li>
+            <a href="#category" class="footer-link">Môn học</a>
+          </li>
+          <li>
+            <a href="#blog" class="footer-link">Thành tích</a>
+          </li>
+          <li>
+            <a href="#video" class="footer-link">Video</a>
+          </li>
+        </ul>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Liên hệ</p>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/trannuhoanglinh.page" class="footer-link">Facebook</a>
+          </li>
+          <li>
+            <a href="https://www.tiktok.com/@trannuhoanglinh" class="footer-link">TikTok</a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/channel/UCgl9icMERkPZwhSi1QIuc4w" class="footer-link">Youtube</a>
+          </li>
+          <li>
+            <a href="thanhtich" class="footer-link">Ứng tuyển</a>
+          </li>
+        </ul>
+        <div class="footer-list">
+          <p class="footer-list-title">Hỏi đáp</p>
+          <p class="footer-list-text">
+            Đặt câu hỏi tại đây
+          </p>
+              <form action="https://formsubmit.co/linhtran.nh@gmail.com"  method="post" class="newsletter-form" onsubmit="handleSubmit2(event)">
+            <input type="gmail" id ="mail2" name="message" placeholder="Email + câu hỏi" required class="input-field">
+            <input type="hidden" name="_captcha" value="false">
+            <button type="submit" class="btn has-before" style="width:20%">
+              <span class="span" >Gửi</span>
+              <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+            </button>
+          </form>
+          <ul class="social-list">
+            <li>
+              <a href="https://www.facebook.com/trannuhoanglinh.page" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.tiktok.com/@trannuhoanglinh" class="social-link">
+                <ion-icon name="logo-tiktok"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/trannuhoanglinh/" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/channel/UCgl9icMERkPZwhSi1QIuc4w" class="social-link">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">  
+      </div>
+    </div>
+  </footer>
+</article>
+</main>
+</body>
+
+<script>
+    const images = document.querySelectorAll('.anhbiaprofile img');
+let currentIndex = 0;
+
+function changeImage() {
+  images[currentIndex].style.display = 'none';
+  currentIndex = (currentIndex + 1) % images.length;
+  images[currentIndex].style.display 
+ = 'block';
+}
+
+setInterval(changeImage, 
+ 5000); // Thay đổi hình ảnh sau mỗi 5 giây
+
+ const button = document.getElementById('myButton');
+
+ button.addEventListener('click', () => {
+     HienThi();
+ });
+ 
+ function HienThi() {
+     // Code của hàm HienThi ở đây
+    
+     const thongTinThem = document.querySelector('.ThongTinThem');
+     if (thongTinThem.style.display === 'none' || thongTinThem.style.display === '') {
+        thongTinThem.style.display = 'block';
+    } else {
+        thongTinThem.style.display = 'none';
+    }
+ }
+
+
+ //tầm nhìn sứ mạng
+
+
+
+//Giá trị cốt lõi
+const rectangles = document.querySelectorAll('.rectangle');
+const textContainer = document.getElementById('text-container');
+const paragraphs = textContainer.querySelectorAll('p');
+
+rectangles.forEach(rectangle => {
+    console.log("a")
+    rectangle.addEventListener('click', () => {
+        const text = rectangle.getAttribute('data-text');
+        const [line1, line2] = text.split('|');
+        textContainer.style.opacity = 0; // Làm mờ văn bản trước khi thay đổi
+        setTimeout(() => {
+            paragraphs[0].innerText = line1;
+            paragraphs[1].innerText = line2;
+            textContainer.style.opacity = 1; // Hiển thị văn bản mới
+        }, 300); // Thời gian trễ phù hợp với transition
+    }); 
+});
+
+const leftArrow = document.querySelector('.left-arrow');
+const rightArrow = document.querySelector('.right-arrow');
+let currentRectangleIndex = 0;
+
+function showRectangleInfo(index) {
+    const rectangle = rectangles[index];
+    const text = rectangle.getAttribute('data-text');
+    const [line1, line2] = text.split('|');
+
+    textContainer.style.opacity = 0;
+    setTimeout(() => {
+        paragraphs[0].innerText = line1;
+        paragraphs[1].innerText = line2;
+        textContainer.style.opacity = 1;
+    }, 300);
+}
+
+leftArrow.addEventListener('click', () => {
+    currentRectangleIndex = (currentRectangleIndex - 1 + rectangles.length) % rectangles.length;
+    showRectangleInfo(currentRectangleIndex);
+});
+
+rightArrow.addEventListener('click', () => {
+    currentRectangleIndex = (currentRectangleIndex + 1) % rectangles.length;
+    showRectangleInfo(currentRectangleIndex);
+});
+
+// Hiển thị thông tin của phần tử đầu tiên khi trang load
+showRectangleInfo(currentRectangleIndex);
+
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="/assets/test.js"></script>
+    <script src="assets/js/script.js"></script>
+
+</html>

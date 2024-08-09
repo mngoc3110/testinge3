@@ -1,0 +1,13 @@
+				@font-face {
+					font-family: 'sfufuturabold';
+					src: url('/wp-content/uploads/useanyfont/1722SFUFuturaBold.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/1722SFUFuturaBold.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.sfufuturabold{font-family: 'sfufuturabold' !important;}
+
+						h1, h2, h3, h4, h5, h6{
+					font-family: 'sfufuturabold' !important;
+				}
+		

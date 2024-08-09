@@ -1,0 +1,63 @@
+:root {
+  --primary-color: #1b1b1b;
+  --primary-color-hover: #cfac9f;
+  --border-color: #eee6e2;
+}
+
+#customize-theme-controls
+  .control-section:hover
+  > .accordion-section-title:after {
+  color: var(--primary-color);
+}
+
+#customize-controls .control-section .accordion-section-title:focus,
+#customize-controls .control-section .accordion-section-title:hover,
+#customize-controls .control-section.open .accordion-section-title,
+#customize-controls .control-section:hover > .accordion-section-title,
+#accordion-panel-fort_panel .accordion-section-title {
+  background: var(--primary-color);
+  color: #fff;
+  border-left-color: var(--primary-color-hover);
+}
+
+#customize-outer-theme-controls
+  .control-section
+  .accordion-section-title:focus:after,
+#customize-outer-theme-controls
+  .control-section
+  .accordion-section-title:hover:after,
+#customize-outer-theme-controls
+  .control-section.open
+  .accordion-section-title:after,
+#customize-outer-theme-controls
+  .control-section:hover
+  > .accordion-section-title:after,
+#customize-theme-controls .control-section .accordion-section-title:focus:after,
+#customize-theme-controls .control-section .accordion-section-title:hover:after,
+#customize-theme-controls .control-section.open .accordion-section-title:after,
+#customize-theme-controls
+  .control-section:hover
+  > .accordion-section-title:after {
+  color: #fff;
+}
+
+#accordion-panel-fort_panel .accordion-section-title::after {
+  color: #fff;
+}
+
+#customize-controls .control-section:hover > .accordion-section-title {
+  color: #fff;
+  background: var(--primary-color-hover);
+  border-left-color: var(--primary-color);
+}
+
+#customize-controls .control-section:hover > .accordion-section-title::after {
+  color: #fff;
+}
+
+.at-pro {
+  background: var(--primary-color) !important;
+  color: #fff !important;
+  box-shadow: none !important;
+  border-color: var(--primary-color) !important;
+}
