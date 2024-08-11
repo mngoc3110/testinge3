@@ -308,9 +308,8 @@ body {
 .hero { padding-block-start: calc(var(--section-padding) + 80px); }
 
 .hero .container {
-  max-width: 90%;
   display: grid;
-  gap: 0px;
+  gap: 40px;
 }
 
 .hero-text {
@@ -749,7 +748,7 @@ body {
 }
 
 .footer-top {
-  display: grid;
+  
   gap: 30px;
 }
 
@@ -1086,7 +1085,7 @@ body {
   }
 
   .hero .section-title,
-  .hero-text { text-align: left; }
+  .hero-text { text-align: center; }
 
   .hero .btn { margin-inline: 0; }
 
@@ -1202,11 +1201,6 @@ body {
     color: var(--eerie-black-1);
     padding-block: 20px;
   }
-  .navlist li img {
-    width: 95px; /* Điều chỉnh kích thước ảnh theo ý muốn */
-    height: auto;
-    margin-right: 10px; /* Tạo khoảng cách giữa ảnh và văn bản */
-}
 
 .btn { margin-inline-end: 0; }
 
@@ -1285,7 +1279,6 @@ body {
   grid-template-columns: repeat(auto-fit,minmax(280px,auto));
   justify-content: center;
   gap:1.5rem;
-  
 }
 .post-box{
   box-shadow: 0 4px 14px hsl(355deg 25% 15% / 10%);
@@ -1504,11 +1497,9 @@ header{
   position: fixed;
   right: 0;
   top: 0;
-  padding:20px 12%;
-  margin-left:100px;
+  padding: 33px 9%;
   z-index: 1000;
-  width: 100vw;
-  height:7vh;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1521,7 +1512,7 @@ header{
 }
 .navlist a{
   color: black;
-  margin-left: 80px;
+  margin-left: 60px;
   font-size: 17px;
   font-weight: 600;
   border-bottom: 2px solid transparent;
@@ -1541,64 +1532,32 @@ header{
   cursor: pointer;
   display: none;
 }
-@media(max-width:1750px){
- 
-  .navlist a{
-    font-size:13px;
-  }
-}
 @media (max-width: 1535px){
   header{
-      padding: 15px 0%;
+      padding: 15px 3%;
       transition: .25;
-      align-items: center;
-      justify-content: center;
   }
-  
 }
 @media (max-width: 1460px){
   section{
       padding: 0 12%;
       transition: .2s;
   }
-  .navlist a{
-    font-size:13px;
+  .activity-container{
+    display:grid
   }
-  .navlist li img {
-    width: 50px; /* Điều chỉnh kích thước ảnh theo ý muốn */
-    height: auto;
-    margin-right: 10px; /* Tạo khoảng cách giữa ảnh và văn bản */
-}
-}
-.ten {
-  font-size: 90px;
-  color: hsl(351, 83%, 61%);
+  .activity-row{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 @media (max-width: 1340px){
   .chao img{
       width: 100%;
       height: auto;
    }
-   .navlist a{
-    font-size:12px;
-  }
-  header{
-    width:100%;
-  }
-  .section-text{
-    width:400px;
-  }
-  .section-title{
-    font-size:30px;
-    margin-left:-200px;  
-  }
-  .ten{
-    font-size:50px;
-  }
 }
-
-
-
 @media (max-width: 1195px){
   section{
       padding: 0 3%;
@@ -1610,25 +1569,47 @@ header{
   .chao img{
     width: 100%;
     height: auto;
+}
+.activity-container{
+  display:grid
+}
+.activity-row{
+  flex-direction: column;
+}
+.containerGTCL{
+  width: 85%;
+}
+.containerGTCL .rectangle .btn-read-more{
+  font-size:10px
+}
+.rectangleCTNB{
+  width:400px;
+  font-size:20px;
+}
+.circleCTNB{
+  display:none;
+}
+.carousel .list .item:nth-child(1) .content .author,
+.carousel .list .item:nth-child(1) .content .title,
+.carousel .list .item:nth-child(1) .content .topic,
+.carousel .list .item:nth-child(1) .content .des,
+.carousel .list .item:nth-child(1) .content .buttons
+{
+    width:700px;
+   
+}
+.carousel .list .item .title,
+.carousel .list .item .topic{
+    font-size: 2em;
+    font-weight: bold;
     
 }
-.navlist a{
-  font-size:11px;
-}
-.section-title .ten{
-  font-size:50px;
-}
-.ten{
-  font-size: 40px !important;
-  margin-left:50px;
-  position: relative;
-  left:100px;
-  align-items: center;
-  justify-content: center;
-}
+.thumbnail{
+  display:none;
 }
 
-@media (max-width: 1000px){
+}
+@media (max-width: 990px){
   .test{
     flex-direction: column;
     transition: all .55s ease;
@@ -1657,35 +1638,110 @@ header{
       display: block;
       margin: 11px 0; 
       margin-left: 0;
-      font-size: 5px;
   }
   .navlist.open{
       left: 0;
+      height: 400px;
   }
-  
   .Hello{
     display:flex;
     flex-direction: column-reverse;
   }
-  .navlist li img {
-    width: 50px; /* Điều chỉnh kích thước ảnh theo ý muốn */
-    height: auto;
-    margin-right: 10px; /* Tạo khoảng cách giữa ảnh và văn bản */
-  }
-  .post-row {
-    
-    flex-direction: column;
-  }
-  .popup-content{
-    font-size:30px;
-  }
+  .carousel .list .item:nth-child(1) .content .author,
+.carousel .list .item:nth-child(1) .content .title,
+.carousel .list .item:nth-child(1) .content .topic,
+.carousel .list .item:nth-child(1) .content .des,
+.carousel .list .item:nth-child(1) .content .buttons
+{
+    width:400px;
+   
 }
-@media(max-width:840px){
-  .popup-content{
-    font-size:25px;
-  }
+.carousel .list .item .title,
+.carousel .list .item .topic{
+    font-size: 2em;
+    font-weight: bold;
+    
+}
+.carousel .list .item:nth-child(1) .content .des{
+  font-size:13px;
+}
+.activity-container{
+  display:grid
+}
+.activity-row{
+  flex-direction: column;
+}
+ .activity-description p{
+  font-size:14px;
+}
+.arrowsTN {
+  right:0;
+}
+.rectangleCTNB{
+  
+  font-size:20px;
+}
+#reverse,
+.slider .list .item .content{
+  flex-direction: column;
+}
+.containerGTCL {
+  position: relative;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 300px; /* Điều chỉnh chiều cao theo nhu cầu */
+}
+
+.rectangle {
+  position: absolute;
+  width: 100%; /* Chiều rộng chiếm toàn bộ container */
+  height: 100%; /* Chiều cao chiếm toàn bộ container */
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.rectangle.active {
+  opacity: 1;
+  z-index: 2;
+}
+#left{
+  display:block;
+  position:absolute;
+  left:0%;
+  z-index:3;
+}
+#right{
+  display:block;
+  position:absolute;
+  right:0%;
+  z-index:3;
+}
+
 }
 @media (max-width: 680px){
+  .carousel .list .item .title,
+  .carousel .list .item .topic{
+      font-size: 1em;
+      font-weight: bold;
+     
+  }
+  
+  .carousel .list .item:nth-child(1) .content .author,
+  .carousel .list .item:nth-child(1) .content .title,
+  .carousel .list .item:nth-child(1) .content .topic,
+  .carousel .list .item:nth-child(1) .content .des,
+  .carousel .list .item:nth-child(1) .content .buttons
+  {
+      width:300px;
+     
+  }
+  .carousel .list .item:nth-child(1) .content .des{
+    font-size:10px;
+  }
   .chao img{
       width: 100%;
       height: auto;
@@ -1702,28 +1758,103 @@ header{
     grid-template-columns: repeat(1,1fr);
     
   }
-  .popup-content{
-    font-size:20px;
+  /* .about-banner .img-holder{
+    width:400px;
+    
+    margin:0 auto;
+    
+  } */
+  .about-list,
+  .about-banner{
+    align-items: center;
   }
-}
-@media(max-width:400px){
-  .popup-content{
-    font-size: 9px;
+  .about-item{
+    width:350px;
+  }
+  .about-content .section-text{
+    width:70%;
     
   }
+  
+  .about-item.active{
+    margin-bottom:300px;
+  }
+  .about-content .h2.section-title{
+    margin-right:140px;
+  }
+  .activity-container{
+    display:grid
+  }
+  .hero-content .h1.section-title{
+    font-size:30px;
+
+  }
+  .activity-row{
+    flex-direction: column;
+  }
+  .activity-container .h2.active-title {
+    font-size:33px;
+    margin-bottom:30px;
+  }
+  
+  .arrowsTN {
+    right:0;
+  }
+ 
+ 
+  .slider .list .item .content h2{
+    font-size:5em;
+  }
+  .slider .list .item .content {
+    width:300px;
+    margin:0 0 10px -20px;
+  }
 }
+/* @media(max-width:352px){
+  .about-banner .img-holder{
+    max-width:200px;
+   
+  }
+  .about-banner{
+    width:300px;
+  }
+  .about-content{
+    width:400px
+  }
+  .popup-content{
+    width:300px
+  }
+  .about-item.active{
+    margin-bottom:300px;
+  }
+  .slider .list .item .content h2{
+    font-size:5em;
+  }
+  .slider .list .item .content {
+    width:300px;
+    margin:0 0 10px -20px;
+  }
+  .ThongTin{
+    font-size: 8px;
+    font-weight: 400;
+  }
+  .text-container{
+    font-size:17px
+  }
+} */
 
 
 /* Bảng thành tích với cảm nhận học sinh */
 .comment {
   background-color: #ffffff;
   padding: 50px 0;
+  text-align: center;
+  justify-self: center;
 }
 
 .container {
-  max-width: 1675px;
+  max-width: 1275px;
   margin: 0 auto;
-  
 }
 
 .h2.section-title {
@@ -1735,7 +1866,7 @@ header{
 .testimonials-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .testimonials {
@@ -1823,11 +1954,3 @@ header{
   font-size: 20px; /* Giảm kích thước font */
   color: black;
 }
-
-.activity-date {
-  display: block;
-  margin-top: 5px; /* Giảm margin-top */
-  color: #777;
-}
-
-
